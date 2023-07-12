@@ -21,10 +21,10 @@ class HomeViewModel @Inject constructor(
     private val _state = MutableStateFlow<CharacterState>(CharacterState.Empty)
     val state: StateFlow<CharacterState>
         get() = _state
-//
-//    init {
-//        fetchCharacter()
-//    }
+
+    init {
+        fetchCharacter()
+    }
 
 
 

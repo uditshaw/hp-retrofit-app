@@ -33,25 +33,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        lifecycleScope.launch {
-            homeViewModel.state.collect{uiState ->
-                when (uiState) {
-                    CharacterState.Empty -> {
-
-                    }
-                    is CharacterState.Error -> {
-                    }
-                    CharacterState.Loading -> {
-                    }
-                    is CharacterState.Success -> {
-                        val result: List<Character> = uiState.data as List<Character>
-
-                        Log.d("tag", "onCreate: Success\n$result")
-                    }
-                }
-            }
-        }
-
         setContent {
             HarryPorterApiAppTheme {
                 // A surface container using the 'background' color from the theme

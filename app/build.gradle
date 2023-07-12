@@ -91,5 +91,6 @@ dependencies {
     debugImplementation "com.plutolib.plugins:bundle-core:$pluto_version"
     releaseImplementation "com.plutolib.plugins:bundle-core-no-op:$pluto_version"
 
-
+    // LandScapist Coil-Image
+    implementation "com.github.skydoves:landscapist-coil:$coil_image_version"
 }
